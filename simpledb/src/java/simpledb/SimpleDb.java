@@ -127,9 +127,9 @@ public class SimpleDb {
             if (args.length >= 10 && args[9].startsWith("--imputationMethod=")) {
                 imputationMethod = args[9].split("=")[1];
             }
-runner = new ExperimentRunner(minAlpha, maxAlpha, step, iters,
-catalog, queries, outputDir, planOnly,
-imputationMethod);
+            runner = new ExperimentRunner(minAlpha, maxAlpha, step, iters,
+            catalog, queries, outputDir, planOnly,
+            imputationMethod);
         }
 		try {
             runner.runExperiments();

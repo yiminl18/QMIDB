@@ -1,0 +1,13 @@
+              π(null,null),card:0
+              |
+              g(demo.income), avg(exams.cuff_size),card:0
+              |
+              ⨝(demo.id=exams.id),card:0
+  ____________|_____________
+  |                        |
+  μ(demo.income),card:0    σ(exams.height>=15000),card:0
+  |                        |
+  |                        μ(exams.cuff_size,exams.height),card:0
+  |                        |
+scan(demo),card:10175    scan(exams),card:9813
+

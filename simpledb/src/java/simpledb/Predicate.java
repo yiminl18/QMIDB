@@ -45,7 +45,7 @@ public class Predicate implements Serializable {
 
     }
     
-    private final int field;
+    private final int field;//this is the index of attribute, not specified the relation
     private final Op op;
     private final Field operand;
     

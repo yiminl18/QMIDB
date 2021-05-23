@@ -1,0 +1,14 @@
+                                      π(null),card:0
+                                      |
+                                    avg(labs.blood_lead),card:0
+                                      |
+                                      ⨝(labs.id=exams.id),card:0
+                ______________________|______________________
+                |                                           |
+                ⨝(demo.id=labs.id),card:0                   |
+  ______________|_______________                            |
+  |                            |                            |
+  σ(demo.age_yrs<=6),card:0    μ(labs.blood_lead),card:0    |
+  |                            |                          scan(exams),card:9813
+scan(demo),card:10175        scan(labs),card:9813
+

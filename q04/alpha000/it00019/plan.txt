@@ -1,0 +1,15 @@
+             π(null),card:0
+             |
+           avg(exams.waist_circumference),card:0
+             |
+             ⨝(demo.id=exams.id),card:0
+  ___________|____________
+  |                      |
+  |                      σ(exams.weight>=10000),card:0
+  |                      |
+  |                      σ(exams.height>=15000),card:0
+  |                      |
+  |                      μ(exams.waist_circumference,exams.weight,exams.height),card:0
+  |                      |
+scan(demo),card:10175  scan(exams),card:9813
+

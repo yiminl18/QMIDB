@@ -188,6 +188,7 @@ public class ExperimentRunner {
         this.queries = getQueries();
         for (int q = 0; q < queries.length; q++) {
             for (double alpha = this.minAlpha; alpha <= (this.maxAlpha + ALPHA_EPSILON); alpha += this.step) {
+                System.out.println(alpha);
                 openTimeWriter(q, alpha);
                 for (int i = 0; i < this.iters; i++) {
                     openOtherWriters(q, alpha, i);
