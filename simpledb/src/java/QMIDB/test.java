@@ -8,27 +8,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.*;
 import java.nio.file.Paths;
+import java.util.HashMap;
 
 public class test {
-    public static void testImputation()throws IOException {
-        double minAlpha = 0;//alpha 0 is highest quality
-        double maxAlpha = 0;
-        double step  = 0.1;//step to range alpha
-        int iter = 20;//not used
-        String catalog = "simpledb/demo.db/catalog.txt";
-        String queries = "simpledb/demo.db/queries.txt";
-        String outputDir = "";
-        boolean planOnly = false;
-        String imputationMethod = ImputeFactory.DEFAULT_IMPUTATION_METHOD;
-        ExperimentRunner runner = new ExperimentRunner(minAlpha, maxAlpha, step, iter, catalog, queries, outputDir, planOnly, imputationMethod);
 
-        try {
-            runner.runExperiments();
-        } catch (Exception e) {
-            System.err.println("Failed to run experiments: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
 
     public static void testPath()throws IOException{
         String catalog = "demo.db/catalog.txt";
@@ -39,7 +22,7 @@ public class test {
         System.out.println(queriesPath);
     }
 
-    public static void testPredicate(){
+    public static void testComplexQuery(){
         Type types2[] = new Type[]{ Type.INT_TYPE, Type.INT_TYPE, Type.INT_TYPE };
         String names2[] = new String[]{ "a", "b", "c" };
 
@@ -126,8 +109,6 @@ public class test {
         System.out.println(t3);
     }
 
-    public Attribute function1(int cc){
-        Attribute a = new Attribute("a","b");
-        return a;
-    }
+
+
 }
